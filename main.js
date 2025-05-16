@@ -1,1 +1,0 @@
-document.getElementById('app').innerText = 'Quiz działa poprawnie!';
