@@ -1,0 +1,11 @@
+{
+  "name": "Zostań Świadomym Liderem",
+  "short_name": "ABEG Quiz",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#004ea2",
+  "icons": [
+    { "src": "icon512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
