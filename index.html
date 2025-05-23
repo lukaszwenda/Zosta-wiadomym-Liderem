@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zostań Świadomym Liderem</title>
-    <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="app">
-      <h1>Zostań Świadomym Liderem</h1>
-      <p>Twoja aplikacja PWA działa!</p>
-    </div>
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("sw.js")
-          .then(() => console.log("Service Worker registered"))
-          .catch(err => console.error("Service Worker error:", err));
-      }
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zostań Świadomym Liderem</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1a0000;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <img src="start-page.png" alt="Zostań Świadomym Liderem - strona tytułowa" />
+</body>
 </html>
