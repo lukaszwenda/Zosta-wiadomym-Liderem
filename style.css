@@ -4,10 +4,10 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -19,7 +19,7 @@ body {
 
 .full-image {
   max-width: 100%;
-  max-height: 100vh;
+  max-height: calc(100vh - 100px);
   width: auto;
   height: auto;
   object-fit: contain;
@@ -35,13 +35,21 @@ body {
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
-  margin-top: 1rem;
+  margin: 1rem;
   text-decoration: none;
   display: inline-block;
+  animation: pulse 1.8s infinite;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
   background-color: #a00000;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
 #answers .button {
@@ -67,3 +75,4 @@ li {
   margin-bottom: 1rem;
   line-height: 1.5;
 }
+
