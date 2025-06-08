@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz ABEG – Zostań Świadomym Liderem</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f1e7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+
+    .quiz-container {
+      background: white;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      padding: 30px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .question-number {
+      font-size: 16px;
+      color: #8C2F2F;
+      margin-bottom: 10px;
+    }
+
+    .question {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .answer {
+      background-color: #fff;
+      color: #333;
+      border: 2px solid #8C2F2F;
+      padding: 12px 20px;
+      margin: 10px 0;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .answer:hover {
+      background-color: #8C2F2F;
+      color: white;
+    }
+
+    .next-btn {
+      margin-top: 20px;
+      background-color: #8C2F2F;
+      color: white;
+      padding: 10px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .next-btn:hover {
+      background-color: #a03c3c;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="question-number">Pytanie 1 z 10</div>
+    <div class="question">Jak najlepiej wesprzeć kolegę, który przeżywa trudności?</div>
+    <button class="answer">Oferować pomoc i wysłuchać</button>
+    <button class="answer">Zignorować potrzeby kolegi</button>
+    <button class="answer">Skupić się tylko na zadaniach</button>
+    <button class="next-btn">Dalej</button>
+  </div>
+</body>
+</html>
