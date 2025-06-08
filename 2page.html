@@ -4,47 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zostań Świadomym Liderem – Strona 2</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f9f1e7;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
     }
 
-    img {
-      max-width: 90%;
+    .container {
+      position: relative;
+      text-align: center;
+    }
+
+    .main-image {
+      max-width: 100%;
       height: auto;
-      margin-bottom: 30px;
+      display: block;
     }
 
-    .dalej-button {
+    .quiz-button {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
       background-color: #8C2F2F;
       color: white;
-      font-weight: bold;
-      padding: 12px 30px;
-      border: none;
-      border-radius: 8px;
       font-size: 18px;
+      font-weight: bold;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 10px;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s ease;
     }
 
-    .dalej-button:hover {
-      background-color: #a33b3b;
+    .quiz-button:hover {
+      background-color: #a63d3d;
+    }
+
+    @media (max-width: 600px) {
+      .quiz-button {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="quiz-layout.png" alt="Ilustracja quizu" />
-  <a href="abeg.html">
-    <button class="dalej-button">Dalej</button>
-  </a>
+  <div class="container">
+    <img src="2page.png" alt="Druga strona – grafika" class="main-image" />
+    <a href="abeg.html">
+      <button class="quiz-button">Przejdź do quizu</button>
+    </a>
+  </div>
 </body>
 </html>
