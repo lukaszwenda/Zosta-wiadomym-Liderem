@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz ABEG – Zostań Świadomym Liderem</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f1e7;
+    }
+
+    .header {
+      background-color: #8C2F2F;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .quiz-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #f9f1e7;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .question-number {
+      color: #8C2F2F;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .question {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .answer {
+      display: block;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      padding: 14px 20px;
+      margin: 12px 0;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .answer:hover {
+      border-color: #8C2F2F;
+    }
+
+    .answer.selected {
+      border-color: #8C2F2F;
+      background-color: #e9d5cd;
+    }
+
+    .next-btn {
+      display: none;
+      margin-top: 30px;
+      background-color: #8C2F2F;
+      color: white;
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .next-btn:hover {
+      background-color: #a33b3b;
+    }
+
+    .result {
+      font-size: 22px;
+      margin-top: 30px;
+    }
+
+    .comment {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">ZOSTAŃ ŚWIADOMYM LIDEREM</div>
+  <div class="quiz-container" id="quiz">
+    <div class="question-number" id="qNumber"></div>
+    <div class="question" id="question"></div>
+    <div id="answers"></div>
+    <button class="next-btn" id="nextBtn" onclick="nextQuestion()">Dalej</button>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        q: "Co oznacza postawa zaangażowania w codziennej pracy?",
+        a: ["Angażowanie się w realizację celów firmy", "Wykonywanie wyłącznie prostych zadań", "Unikanie trudności i wyzwań"],
+        correct: 0
+      },
+      {
+        q: "Co świadczy o ciekawości w pracy?",
+        a: ["Zadawanie pytań i szukanie rozwiązań", "Unikanie nowych zadań", "Ignorowanie problemów"],
+        correct: 0
+      },
+      {
+        q: "Jak pokazujemy odwagę w firmie?",
+        a: ["Zgłaszając pomysły i opinie", "Zachowując milczenie", "Zgadzając się ze wszystkimi"],
+        correct: 0
+      },
+      {
+        q: "Wspierający pracownik to ktoś, kto:",
+        a: ["Pomaga innym i okazuje empatię", "Krytykuje błędy kolegów", "Pracuje tylko na własny wynik"],
+        correct: 0
+      },
+      {
+        q: "Współpraca w zespole oznacza:",
+        a: ["Dzielenie się wiedzą i współdziałanie", "Konkurencję między członkami", "Pracę w izolacji"],
+        correct: 0
+      },
+      {
+        q: "Osoba zaangażowana:",
+        a: ["Działa zgodnie z celami zespołu", "Unika odpowiedzialności", "Czeka na polecenia"],
+        correct: 0
+      },
+      {
+        q: "Ciekawość można rozpoznać po:",
+        a: ["Inicjowaniu nowych działań", "Odrzucaniu zmian", "Ignorowaniu sugestii"],
+        correct: 0
+      },
+      {
+        q: "Odwaga to również:",
+        a: ["Podejmowanie trudnych tematów", "Unikanie konfliktów", "Zachowywanie dystansu"],
+        correct: 0
+      },
+      {
+        q: "Wspieranie innych to:",
+        a: ["Udzielanie pomocy i słuchanie", "Zajmowanie się tylko sobą", "Ignorowanie potrzeb zespołu"],
+        correct: 0
+      },
+      {
+        q: "Współpraca to:",
+        a: ["Wspólne osiąganie celów", "Rywalizacja o wyniki", "Zamykanie się na innych"],
+        correct: 0
+      }
+    ];
+
+    let current = 0;
+    let score = 0;
+
+    function loadQuestion() {
+      document.getElementById("qNumber").innerText = "Pytanie " + (current + 1) + " z " + questions.length;
+      document.getElementById("question").innerText = questions[current].q;
+
+      const answersDiv = document.getElementById("answers");
+      answersDiv.innerHTML = "";
+      questions[current].a.forEach((text, index) => {
+        const btn = document.createElement("div");
+        btn.className = "answer";
+        btn.innerText = text;
+        btn.onclick = () => selectAnswer(btn, index);
+        answersDiv.appendChild(btn);
+      });
+
+      document.getElementById("nextBtn").style.display = "none";
+    }
+
+    function selectAnswer(btn, index) {
+      document.querySelectorAll(".answer").forEach(el => el.classList.remove("selected"));
+      btn.classList.add("selected");
+      document.getElementById("nextBtn").style.display = "inline-block";
+      btn.dataset.selected = index;
+    }
+
+    function nextQuestion() {
+      const selected = document.querySelector(".answer.selected");
+      if (selected) {
+        const index = Array.from(document.querySelectorAll(".answer")).indexOf(selected);
+        if (index === questions[current].correct) score++;
+      }
+      current++;
+      if (current < questions.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      const quiz = document.getElementById("quiz");
+      quiz.innerHTML = "<div class='result'>Twój wynik: " + score + " / " + questions.length + "</div>";
+      let comment = "";
+      const percent = score / questions.length;
+      if (percent === 1) comment = "Świetnie! Jesteś świadomym liderem.";
+      else if (percent >= 0.8) comment = "Bardzo dobrze! Masz solidne podstawy.";
+      else comment = "Warto lepiej poznać zachowania ABEG.";
+      quiz.innerHTML += "<div class='comment'>" + comment + "</div>";
+    }
+
+    loadQuestion();
+  </script>
+</body>
+</html>
