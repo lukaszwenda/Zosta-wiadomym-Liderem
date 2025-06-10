@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zostań Świadomym Liderem – Start</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zostań Świadomym Liderem</title>
   <style>
-    html, body {
+    body, html {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f1e7;
+      height: 100%;
+      background-color: #f5ede1;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      height: 100vh;
-      overflow: hidden;
+    }
+
+    .img-container {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-height: 100vh;
     }
 
     .main-image {
-      max-height: 85vh;
-      width: auto;
-      max-width: 100vw;
+      max-width: 100%;
+      max-height: 100vh;
+      object-fit: contain;
     }
 
-    .dalej-button {
-      margin-top: auto;
-      margin-bottom: 20px;
-      background-color: #8C2F2F;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
+    .btn {
+      margin: 20px;
       padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: #8B2E24;
+      color: white;
       border: none;
       border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .dalej-button:hover {
-      background-color: #a33b3b;
+    .btn:hover {
+      background-color: #a3332b;
     }
   </style>
 </head>
 <body>
-  <img src="FirstPage.png" alt="Strona startowa" class="main-image">
-  <a href="2page.html">
-    <button class="dalej-button">Dalej</button>
-  </a>
+  <div class="img-container">
+    <img src="FirstPage.png" alt="Zostań Świadomym Liderem" class="main-image" />
+  </div>
+  <button class="btn" onclick="location.href='2page.html'">Dalej</button>
 </body>
 </html>
