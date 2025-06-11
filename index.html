@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zostań Świadomym Liderem – Start</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       background-color: #fef7ec;
-      height: 100vh;
+    }
+
+    .container {
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
     }
 
-    .fullscreen-img {
-      max-width: 100vw;
-      max-height: 100vh;
+    .container img {
+      max-width: 100%;
+      max-height: 100%;
       width: auto;
       height: auto;
     }
@@ -27,7 +33,6 @@
       bottom: 40px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 10;
     }
 
     .dalej-button {
@@ -44,9 +49,11 @@
   </style>
 </head>
 <body>
-  <img src="FirstPage.png" class="fullscreen-img" alt="Zostań Świadomym Liderem">
-  <div class="button-wrapper">
-    <a href="2page.html"><button class="dalej-button">Dalej</button></a>
+  <div class="container">
+    <img src="FirstPage.png" alt="Zostań Świadomym Liderem">
+    <div class="button-wrapper">
+      <a href="2page.html"><button class="dalej-button">Dalej</button></a>
+    </div>
   </div>
 </body>
 </html>
