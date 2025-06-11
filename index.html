@@ -5,19 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zostań Świadomym Liderem – Start</title>
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       width: 100%;
+      height: 100%;
       background-color: #fef7ec;
     }
 
-    .fullscreen-image {
-      display: block;
+    .background {
+      background-image: url('FirstPage.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       width: 100vw;
       height: 100vh;
-      object-fit: cover;
+      position: relative;
     }
 
     .dalej-button {
@@ -39,7 +42,8 @@
   </style>
 </head>
 <body>
-  <img src="FirstPage.png" alt="Zostań Świadomym Liderem" class="fullscreen-image" />
-  <a href="2page.html"><button class="dalej-button">Dalej</button></a>
+  <div class="background">
+    <a href="2page.html"><button class="dalej-button">Dalej</button></a>
+  </div>
 </body>
 </html>
