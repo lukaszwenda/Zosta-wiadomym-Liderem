@@ -11,6 +11,8 @@
       height: 100%;
       background-color: #fef7ec;
       font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
     }
 
     .header {
@@ -22,12 +24,20 @@
       font-weight: bold;
     }
 
+    .quiz-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .quiz-container {
+      width: 90%;
       max-width: 600px;
-      margin: 40px auto;
+      background: #fef7ec;
       padding: 20px;
-      background-color: #fef7ec;
       text-align: center;
+      border-radius: 16px;
     }
 
     .question-number {
@@ -93,11 +103,13 @@
 </head>
 <body>
   <div class="header">ZOSTAŃ ŚWIADOMYM LIDEREM</div>
-  <div class="quiz-container" id="quiz">
-    <div class="question-number" id="qNumber"></div>
-    <div class="question" id="question"></div>
-    <div id="answers"></div>
-    <button class="next-btn" id="nextBtn" onclick="nextQuestion()">Dalej</button>
+  <div class="quiz-wrapper">
+    <div class="quiz-container" id="quiz">
+      <div class="question-number" id="qNumber"></div>
+      <div class="question" id="question"></div>
+      <div id="answers"></div>
+      <button class="next-btn" id="nextBtn" onclick="nextQuestion()">Dalej</button>
+    </div>
   </div>
 
   <script>
