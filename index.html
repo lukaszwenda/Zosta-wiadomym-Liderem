@@ -8,24 +8,23 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       background-color: #fef7ec;
+      width: 100%;
+      height: 100%;
     }
 
     .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       position: relative;
+      width: 100vw;
+      height: 100vh;
       overflow: hidden;
     }
 
     .container img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .button-wrapper {
@@ -50,7 +49,7 @@
 </head>
 <body>
   <div class="container">
-    <img src="FirstPage.png" alt="Zostań Świadomym Liderem">
+    <img src="FirstPage.png" alt="Zostań Świadomym Liderem" />
     <div class="button-wrapper">
       <a href="2page.html"><button class="dalej-button">Dalej</button></a>
     </div>
