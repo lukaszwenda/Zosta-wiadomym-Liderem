@@ -8,20 +8,29 @@
     html, body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fef7ec;
-      overflow-x: hidden;
+      height: 100%;
+      background-color: black;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .bg-image {
-      display: block;
-      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
       height: auto;
+      display: block;
     }
 
     .button-wrapper {
+      position: absolute;
+      bottom: 40px;
+      width: 100%;
       text-align: center;
-      margin: 20px 0;
     }
 
     .dalej-button {
