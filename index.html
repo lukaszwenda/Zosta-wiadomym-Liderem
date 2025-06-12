@@ -8,8 +8,10 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100vh;
       background: linear-gradient(to bottom, #fdf3e5, #2c1009);
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -17,9 +19,6 @@
 
     .container {
       position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .bg-image {
@@ -27,11 +26,14 @@
       max-width: 100vw;
       height: auto;
       width: auto;
+      display: block;
     }
 
     .dalej-button {
       position: absolute;
-      bottom: 90px; /* dokładnie nad tekstem „created by…” */
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 105px; /* nad napisem */
       background-color: #4d684e;
       color: white;
       font-weight: bold;
@@ -55,4 +57,4 @@
     <a href="2page.html" class="dalej-button">Dalej</a>
   </div>
 </body>
-</html>
+</htm
