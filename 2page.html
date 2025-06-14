@@ -3,56 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zostań Świadomym Liderem – Wprowadzenie</title>
+  <title>Zostań Świadomym Liderem – Strona 2</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background-color: #fef7ec;
-      width: 100%;
-      height: 100%;
+      background: linear-gradient(to bottom, #fdf3e5, #2c1009);
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .container {
       position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
     }
 
-    .container img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    .bg-image {
+      max-height: 100vh;
+      max-width: 100vw;
+      height: auto;
+      width: auto;
       display: block;
     }
 
-    .button-wrapper {
+    .dalej-button {
       position: absolute;
-      bottom: 40px;
       left: 50%;
       transform: translateX(-50%);
-    }
-
-    .dalej-button {
-      background-color: #8C2F2F;
+      bottom: 40px;
+      background-color: #4d684e;
       color: white;
       font-weight: bold;
-      padding: 12px 28px;
+      padding: 10px 22px;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       font-size: 16px;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .dalej-button:hover {
+      background-color: #3d5940;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="2page.png" alt="Wprowadzenie" />
-    <div class="button-wrapper">
-      <a href="abeg.html"><button class="dalej-button">Przejdź do quizu</button></a>
-    </div>
+    <img src="2page.png" alt="Strona 2 – Zostań Świadomym Liderem" class="bg-image" />
+    <a href="abeg.html" class="dalej-button">Przejdź do quizu</a>
   </div>
 </body>
 </html>
