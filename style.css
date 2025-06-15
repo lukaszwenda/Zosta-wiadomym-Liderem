@@ -19,6 +19,7 @@ html, body {
   display: block;
 }
 
+/* Przycisk w prawym górnym rogu */
 .button-top-right {
   position: absolute;
   top: 20px;
@@ -26,6 +27,15 @@ html, body {
   z-index: 10;
 }
 
+/* Przycisk w lewym górnym rogu */
+.button-top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+/* Wspólny styl dla obu przycisków */
 .quiz-button {
   background-color: #3b7d5c;
   color: white;
