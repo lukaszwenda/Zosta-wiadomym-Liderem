@@ -76,25 +76,11 @@
 </head>
 <body>
   <div class="quiz-container">
-    <div class="question-number">Pytanie 1 z 10</div>
-    <div class="question-text">Co oznacza postawa zaangażowania w codziennej pracy?</div>
-    <button class="answer-button">Angażowanie się w realizację celów firmy</button>
-    <button class="answer-button">Wykonywanie wyłącznie prostych zadań</button>
-    <button class="answer-button">Unikanie trudności i wyzwań</button>
+    <div class="question-number" id="questionNumber">Pytanie 1 z 10</div>
+    <div class="question-text" id="questionText">Ładowanie pytania...</div>
     <button class="next-button" id="nextBtn">Dalej</button>
   </div>
 
-  <script>
-    const answers = document.querySelectorAll(".answer-button");
-    const nextBtn = document.getElementById("nextBtn");
-
-    answers.forEach(btn => {
-      btn.addEventListener("click", () => {
-        answers.forEach(b => b.style.backgroundColor = "white");
-        btn.style.backgroundColor = "#d2ead2";
-        nextBtn.classList.add("visible");
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
