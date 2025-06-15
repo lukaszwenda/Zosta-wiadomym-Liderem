@@ -1,4 +1,4 @@
-// script.js — dynamiczny quiz z losowaniem pytań i odpowiedzi
+// script.js — dynamiczny quiz z losowaniem pytań i odpowiedzi + opcją powtórki
 
 const questionContainer = document.querySelector(".question-text");
 const questionNumber = document.querySelector(".question-number");
@@ -10,23 +10,26 @@ let currentQuestionIndex = 0;
 let score = 0;
 let shuffledAnswers = [];
 
-// Wczytaj pytania z JSONa
-fetch("full-quiz-question-bank.json")
-  .then((res) => res.json())
-  .then((data) => {
-    questions = shuffleArray(data).slice(0, 10);
-    showQuestion();
-  });
+function startQuiz() {
+  fetch("full-quiz-question-bank.json")
+    .then((res) => res.json())
+    .then((data) => {
+      questions = shuffleArray(data).slice(0, 10);
+      currentQuestionIndex = 0;
+      score = 0;
+      showQuestion();
+    });
+}
 
 function showQuestion() {
   const q = questions[currentQuestionIndex];
   questionNumber.textContent = `Pytanie ${currentQuestionIndex + 1} z 10`;
   questionContainer.textContent = q.question;
 
-  // Usuń poprzednie odpowiedzi
   document.querySelectorAll(".answer-button").forEach((btn) => btn.remove());
+  const existingRetryBtn = document.getElementById("retryBtn");
+  if (existingRetryBtn) existingRetryBtn.remove();
 
-  // Losowe odpowiedzi
   shuffledAnswers = shuffleArray(
     q.answers.map((text, index) => ({ text, index }))
   );
@@ -40,6 +43,8 @@ function showQuestion() {
   });
 
   nextButton.classList.remove("visible");
+  nextButton.textContent = "Dalej";
+  nextButton.style.display = "inline-block";
 }
 
 function selectAnswer(selectedIndex) {
@@ -71,6 +76,13 @@ function showResult() {
   questionNumber.textContent = "Test zakończony";
   questionContainer.textContent = `Twój wynik: ${score}/10`;
   nextButton.style.display = "none";
+
+  const retryBtn = document.createElement("button");
+  retryBtn.id = "retryBtn";
+  retryBtn.textContent = "Powtórz test";
+  retryBtn.className = "next-button visible";
+  retryBtn.addEventListener("click", startQuiz);
+  answersBlock.appendChild(retryBtn);
 }
 
 function shuffleArray(array) {
@@ -81,4 +93,6 @@ function shuffleArray(array) {
   }
   return newArray;
 }
+
+startQuiz();
 
