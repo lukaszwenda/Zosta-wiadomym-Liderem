@@ -1,4 +1,4 @@
-// script.js — naprawiona wersja z poprawnym porównywaniem odpowiedzi + przycisk „Powtórz test”
+// ✅ script.js – w pełni naprawiony (poprawne ocenianie po tekście, losowe pytania, przycisk powtórki)
 
 const questionContainer = document.querySelector(".question-text");
 const questionNumber = document.querySelector(".question-number");
@@ -9,6 +9,7 @@ let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let shuffledAnswers = [];
+let correctAnswerText = "";
 
 function startQuiz() {
   fetch("full-quiz-question-bank.json")
@@ -29,6 +30,9 @@ function showQuestion() {
   document.querySelectorAll(".answer-button").forEach((btn) => btn.remove());
   const existingRetryBtn = document.getElementById("retryBtn");
   if (existingRetryBtn) existingRetryBtn.remove();
+
+  // zapisz poprawną odpowiedź jako tekst
+  correctAnswerText = q.answers[q.correct];
 
   shuffledAnswers = shuffleArray(
     q.answers.map((text, index) => ({ text, index }))
@@ -55,10 +59,6 @@ function selectAnswer(selectedIndex) {
   nextButton.classList.add("visible");
 
   const selectedAnswerText = shuffledAnswers[selectedIndex].text;
-  const correctAnswerText = questions[currentQuestionIndex].answers[
-    questions[currentQuestionIndex].correct
-  ];
-
   if (selectedAnswerText === correctAnswerText) {
     score++;
   }
