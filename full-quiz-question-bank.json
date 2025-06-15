@@ -1,0 +1,272 @@
+[
+  {
+    "question": "Który z poniższych elementów najbardziej wspiera klarowność expose menedżera?",
+    "answers": [
+      "Przedstawienie listy zadań na najbliższy kwartał",
+      "Zarysowanie zasad współpracy i stylu zarządzania",
+      "Skrócone podsumowanie wyników finansowych firmy"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Menedżer mówi: „Nie będziemy się bali trudnych rozmów”. Co najtrafniej oddaje intencję?",
+    "answers": [
+      "Będziecie musieli częściej raportować swoje błędy",
+      "Oczekuję odwagi w komunikowaniu trudnych tematów",
+      "Wdrażam zasadę feedbacku raz w roku"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Czy expose to właściwy moment, by odnieść się do poprzedniego lidera?",
+    "answers": [
+      "Tak, ale wyłącznie w kontekście różnic w stylu pracy",
+      "Nie, to może zostać źle odebrane jako krytyka",
+      "Tak, pod warunkiem że była dobra atmosfera"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Jak najlepiej wpleść temat odpowiedzialności zespołowej w expose?",
+    "answers": [
+      "Wskazać, że każdy odpowiada za swój obszar i nic więcej",
+      "Podkreślić współzależność ról i znaczenie wzajemnego wsparcia",
+      "Przekazać, że odpowiedzialność ponosi wyłącznie lider"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Menedżer kończy expose pytaniem: „Czego ode mnie oczekujecie?” Co oznacza taka postawa?",
+    "answers": [
+      "Otwartość na potrzeby, ale brak konkretnego planu",
+      "Próba przerzucenia odpowiedzialności na zespół",
+      "Zaproszenie do współtworzenia relacji opartej na zaufaniu"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Która z poniższych formuł najlepiej rozpoczyna konstruktywny feedback?",
+    "answers": [
+      "Mam kilka zastrzeżeń do Twojej postawy…",
+      "Chciałbym się z Tobą podzielić kilkoma obserwacjami.",
+      "Nie wiem, co się z Tobą ostatnio dzieje…"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Czy feedback powinien odnosić się do cech osobowości pracownika?",
+    "answers": [
+      "Tak, jeśli wpływają na atmosferę w zespole",
+      "Nie, powinien dotyczyć tylko zachowań i działań",
+      "Tak, żeby pokazać pełny obraz pracownika"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Jak najlepiej zakończyć trudny feedback?",
+    "answers": [
+      "Przypomnieć o konsekwencjach i oczekiwać poprawy",
+      "Zostawić przestrzeń na odpowiedź i zakończyć z wyrazem wsparcia",
+      "Krótko podsumować i przejść do innych obowiązków"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Zespół mówi: „Nie wiemy, jaki mamy priorytet.” Co to oznacza?",
+    "answers": [
+      "Trzeba pilnie przeanalizować komunikację celów",
+      "Zespół jest oporny i wymaga zmiany",
+      "Można poczekać do spotkania rocznego"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Czy menedżer powinien stale nadzorować każdy etap pracy?",
+    "answers": [
+      "Tak, by uniknąć błędów",
+      "Nie, mikrozarządzanie ogranicza samodzielność",
+      "Tylko w przypadku doświadczonych pracowników"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kiedy najlepiej udzielić informacji zwrotnej?",
+    "answers": [
+      "Po kwartalnej ewaluacji",
+      "Jak najszybciej po zdarzeniu",
+      "Po konsultacji z zespołem"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Czy dobrym momentem na feedback jest zebranie zespołu?",
+    "answers": [
+      "Tak, dla edukacji wszystkich",
+      "Nie, feedback powinien być indywidualny",
+      "Tak, jeśli dotyczy wszystkich"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Menedżer: „Mogłeś to zrobić lepiej.” Jak powiedzieć to konstruktywniej?",
+    "answers": [
+      "Zawiodłeś oczekiwania",
+      "To było słabe, ale ok",
+      "Przeanalizujmy, co mogło pójść lepiej"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Jaką rolę odgrywa zaufanie w zarządzaniu zespołem?",
+    "answers": [
+      "Nie jest kluczowe",
+      "Jest fundamentem współpracy",
+      "Ważne tylko przy zmianach"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Jak najskuteczniej budować zaangażowanie zespołu?",
+    "answers": [
+      "Premiując najlepszych",
+      "Tworząc wspólne cele",
+      "Często przypominając o wynikach"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Zespół osiąga cele, ale atmosfera jest napięta. Co robi menedżer?",
+    "answers": [
+      "Ignoruje",
+      "Diagnozuje i rozmawia",
+      "Zmieniam osoby w zespole"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Który błąd popełniają młodzi liderzy?",
+    "answers": [
+      "Chcą być lubiani",
+      "Delegują zadania",
+      "Komunikują oczekiwania"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Nowy lider mówi: „Zrobię wszystko sam”. Ryzyko?",
+    "answers": [
+      "Spadek autorytetu",
+      "Brak rozwoju zespołu",
+      "Opóźnienie urlopów"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Czy menedżer powinien być kolegą zespołu?",
+    "answers": [
+      "Tak, dla otwartości",
+      "Nie, potrzebna równowaga",
+      "Tak, jeśli są w podobnym wieku"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Unikanie trudnych rozmów prowadzi do:",
+    "answers": [
+      "Lepszych relacji",
+      "Napięć i pogorszenia pracy",
+      "Więcej urlopów"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Strach przed błędem u lidera powoduje:",
+    "answers": [
+      "Większą dyscyplinę",
+      "Brak szczerości pracowników",
+      "Motywację zespołu"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Które zachowanie demotywuje zespół?",
+    "answers": [
+      "Jasne cele",
+      "Brak docenienia",
+      "Rozmowy rozwojowe"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Menedżer mówi: „Dobrze poszło z klientem”. Co powinien dodać?",
+    "answers": [
+      "To się rzadko zdarza",
+      "Nie wiem, czy to przypadek",
+      "Co według Ciebie zadziałało najlepiej?"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Czy menedżer powinien znać mocne strony pracowników?",
+    "answers": [
+      "Nie, to HR",
+      "Tylko przy awansach",
+      "Tak, do przypisania zadań"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Jak powinien reagować lider na błędy?",
+    "answers": [
+      "Uczyć przez analizę",
+      "Ignorować",
+      "Karać"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Czy lider powinien zawsze mieć ostatnie słowo?",
+    "answers": [
+      "Tak",
+      "Nie – daj przestrzeń inicjatywie",
+      "Tylko przy budżecie"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Jak często udzielać feedbacku?",
+    "answers": [
+      "Gdy coś pójdzie źle",
+      "Raz do roku",
+      "Regularnie – także pozytywnego"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Menedżer mówi: „Wiem, że miałeś dużo na głowie, ale termin nie został dotrzymany.” Co dalej?",
+    "answers": [
+      "Zostawić temat",
+      "Wspólnie szukać przyczyny",
+      "Zamknąć temat i przejść dalej"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Co zrobić obejmując nowy zespół?",
+    "answers": [
+      "Kontrolować zadania",
+      "Poznać ludzi i ich role",
+      "Wdrożyć swoje procedury"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Co oznacza brak ustalonych priorytetów?",
+    "answers": [
+      "Zespół jest oporny",
+      "Zła komunikacja celów",
+      "Wina przełożonych"
+    ],
+    "correct": 1
+  }
+]
