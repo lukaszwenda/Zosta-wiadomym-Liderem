@@ -1,4 +1,4 @@
-// script.js — dynamiczny quiz z losowaniem pytań i odpowiedzi + opcją powtórki
+// script.js — naprawiona wersja z poprawnym porównywaniem odpowiedzi + przycisk „Powtórz test”
 
 const questionContainer = document.querySelector(".question-text");
 const questionNumber = document.querySelector(".question-number");
@@ -34,7 +34,7 @@ function showQuestion() {
     q.answers.map((text, index) => ({ text, index }))
   );
 
-  shuffledAnswers.forEach(({ text, index }) => {
+  shuffledAnswers.forEach(({ text }, index) => {
     const btn = document.createElement("button");
     btn.className = "answer-button";
     btn.textContent = text;
@@ -54,10 +54,12 @@ function selectAnswer(selectedIndex) {
   event.target.style.backgroundColor = "#d2ead2";
   nextButton.classList.add("visible");
 
-  const correctIndex = questions[currentQuestionIndex].correct;
-  const mappedCorrectIndex = shuffledAnswers[correctIndex].index;
+  const selectedAnswerText = shuffledAnswers[selectedIndex].text;
+  const correctAnswerText = questions[currentQuestionIndex].answers[
+    questions[currentQuestionIndex].correct
+  ];
 
-  if (selectedIndex === mappedCorrectIndex) {
+  if (selectedAnswerText === correctAnswerText) {
     score++;
   }
 }
@@ -95,4 +97,3 @@ function shuffleArray(array) {
 }
 
 startQuiz();
-
